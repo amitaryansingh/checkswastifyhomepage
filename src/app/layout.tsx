@@ -28,9 +28,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${lato.variable} ${playfair.variable}`}
-      suppressHydrationWarning // <-- ADD THIS PROP
+      suppressHydrationWarning
     >
-      <body>
+      {/* 👇 added suppressHydrationWarning here */}
+      <body suppressHydrationWarning>
         <Header />
         <main>{children}</main>
         {/* Footer will go here */}
