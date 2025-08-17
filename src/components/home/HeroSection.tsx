@@ -247,7 +247,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen w-full">
       {/* Layer 1: The animation is fixed to the background */}
-      <div className="fixed top-8 left-0 h-full w-full">
+      <div className="fixed top-0 left-0 h-full w-full">
         <canvas
           ref={canvasRef}
           width="1920"
