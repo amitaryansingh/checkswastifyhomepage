@@ -11,6 +11,10 @@ body {
   @apply bg-secondary text-text-dark font-body;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 /* 2. Added custom themed scrollbar (for Webkit browsers like Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 8px;
