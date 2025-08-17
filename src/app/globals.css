@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Added smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-secondary text-text-dark font-body;
+}
+
+/* 2. Added custom themed scrollbar (for Webkit browsers like Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
