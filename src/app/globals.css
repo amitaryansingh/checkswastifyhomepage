@@ -11,10 +11,6 @@ body {
   @apply bg-secondary text-text-dark font-body;
 }
 
-html, body {
-  overflow: hidden;
-}
-
 /* 2. Added custom themed scrollbar (for Webkit browsers like Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 8px;
@@ -30,4 +26,25 @@ html, body {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-accent;
+}
+
+/* Staggered Word Reveal Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  /* Set animation defaults */
+  opacity: 0; /* Start hidden */
+  animation-fill-mode: forwards; /* Stay visible after animation */
+  animation-name: fadeInUp;
+  animation-duration: 0.8s; /* Control speed */
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth easing */
 }
