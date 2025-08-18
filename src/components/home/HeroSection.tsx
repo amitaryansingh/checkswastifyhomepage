@@ -4,8 +4,8 @@ import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Users, Award, BookOpen } from 'lucide-react';
 
-const frameCount = 32;
-const imagePath = (frame: number) => `/orb-sequence3/ezgif-frame-${String(frame + 1).padStart(3, '0')}.png`;
+const frameCount = 59;
+const imagePath = (frame: number) => `/orb-sequence6/designforhp_${String(frame + 1).padStart(3, '0')}.jpg`;
 
 // NEW: A reusable component for the staggered text effect
 const StaggeredText = ({ text, as: Component = 'h1' }: { text: string; as?: 'h1' | 'h2' }) => {
@@ -107,7 +107,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen w-full">
       <div className="fixed top-0 left-0 h-full w-full">
-        <canvas ref={canvasRef} width="1920" height="1080" className="h-full w-full object-cover" />
+        <canvas ref={canvasRef} width="1920" height="1080" className="h-full w-full object-cover saturate-100 brightness-140" />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
