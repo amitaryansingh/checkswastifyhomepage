@@ -1,3 +1,52 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-secondary text-text-dark font-body;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+} */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +59,8 @@ html {
 body {
   @apply bg-secondary text-text-dark font-body;
 }
+
+
 
 /* 2. Added custom themed scrollbar (for Webkit browsers like Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
@@ -28,7 +79,8 @@ body {
   @apply bg-accent;
 }
 
-/* Staggered Word Reveal Animation */
+
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -41,10 +93,13 @@ body {
 }
 
 .animate-fadeInUp {
-  /* Set animation defaults */
-  opacity: 0; /* Start hidden */
-  animation-fill-mode: forwards; /* Stay visible after animation */
+  opacity: 0;
+  animation-fill-mode: forwards;
   animation-name: fadeInUp;
-  animation-duration: 0.8s; /* Control speed */
-  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth easing */
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.perspective-container {
+  perspective: 1000px;
 }
